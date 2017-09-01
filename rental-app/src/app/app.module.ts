@@ -5,8 +5,12 @@ import { AppRouterModule } from './app-router.module';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { AppStoreModule } from './store/app-store.module';
 import { HttpClientModule } from '@angular/common/http';
+import { AngularFireModule } from 'angularfire2';
 
 import { AppComponent } from './app.component';
+
+//env
+import { environment } from '../environments/environment';
 
 // services
 import { RentalService } from './services/rental.service';
@@ -22,6 +26,7 @@ import { RentalService } from './services/rental.service';
     BrowserAnimationsModule,
     AppStoreModule,
     HttpClientModule,
+    AngularFireModule.initializeApp(environment.firebase),
   ],
   providers: [RentalService],
   bootstrap: [AppComponent]
