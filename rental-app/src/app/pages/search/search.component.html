@@ -1,38 +1,43 @@
 <div class="ui-g">
 
-    <div class="ui-g-4"></div>
+  <div class="ui-lg-1 ui-xl-1"></div>
 
-    <div class="ui-g-3 ui-g-nopad">
-        <div class="ui-g">
-            <div class="ui-g-9">
-                <p-dropdown [style]="{'width': '100%'}" (onChange)="onSelectValue($event)" [options]="fareRange"></p-dropdown>
-            </div>
-            <div class="ui-g-3">
-                <button pButton icon="fa-search" label="ค้นหา" (click)="filterRentalList(selectedFeeRange)"></button>
-            </div>
+  <div class="ui-sm-10 ui-md-8 ui-lg-8 ui-xl-8 ui-g-nopad" style="margin: 0 auto">
+    <div class="ui-g">
+        <div class="ui-sm-12 ui-md-6 ui-lg-6 ui-xl-6" style="margin: 0 auto">
+          <p-dropdown style="width: 100%" [style]="{'width': '100%'}" (onChange)="onSelectValue($event)"
+                      [options]="fareRange"></p-dropdown>
         </div>
-    </div>
-
+        <div class="ui-sm-12 ui-md-3 ui-lg-3 ui-xl-2" style="margin: 0 auto">
+          <button style="float: right; width: 100%" pButton icon="fa-search" label="ค้นหา"
+                  (click)="filterRentalList(selectedFeeRange)"></button>
+        </div>
+      </div>
+  </div>
+  <div class="ui-lg-1 ui-xl-1"></div>
 </div>
 
+<br>
+
 <div class="ui-g">
-    <div class="ui-g-2"></div>
-    <div class="ui-g-8">
-        <p-dataList [emptyMessage]="'ไม่มีข้อมูล'" [value]="state.data">
-            <ng-template let-rental pTemplate="item">
-                <div class="ui-g">
-                    <div class="ui-g-8">
-                        <p><a href="" (click)="onClickRentalPost($event, rental)"><strong>{{rental.name}}</strong></a></p>
-                        <p><strong>ที่อยู่ : </strong>{{rental.address}}</p>
-                    </div>
-                    <div class="ui-g-2">
-                        <p><strong>Tel. : </strong>{{rental.tel}}</p>
-                    </div>
-                    <div class="ui-g-2">
-                        <p><strong>ค่าเช่า : </strong>{{ rental.fee | currency:'USD':true }} บาท</p>
-                    </div>
-                </div>
-            </ng-template>
-        </p-dataList>
-    </div>
+  <div class="ui-lg-1 ui-xl-1"></div>
+  <div class="ui-sm-10 ui-md-10 ui-lg-9 ui-xl-8 ui-g-nopad" style="margin: 0 auto">
+    <p-dataList [emptyMessage]="'ไม่มีข้อมูล'" [value]="state.data">
+      <ng-template let-rental pTemplate="item">
+        <div class="ui-g">
+          <div class="ui-sm-12 ui-md-6 ui-lg-6 ui-xl-6">
+            <p><a href="" (click)="onClickRentalPost($event, rental)"><strong>{{rental.name}}</strong></a></p>
+            <p><strong>ที่อยู่ : </strong>{{rental.address}}</p>
+          </div>
+          <div class="ui-sm-12 ui-md-3 ui-lg-3 ui-xl-3 ">
+            <p><strong>Tel. : </strong>{{rental.tel}}</p>
+          </div>
+          <div class="ui-sm-12 ui-md-3 ui-lg-3 ui-xl-3">
+            <p><strong>ค่าเช่า : </strong>{{ rental.fee | currency:'USD':true }} บาท</p>
+          </div>
+        </div>
+      </ng-template>
+    </p-dataList>
+  </div>
+  <div class="ui-lg-1 ui-xl-1"></div>
 </div>
