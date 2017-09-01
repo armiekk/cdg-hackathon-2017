@@ -1,0 +1,29 @@
+{
+  "scripts": {
+    "build": "webpack --config webpack.config.js --watch",
+    "start": "nodemon ./dist/main.js",
+    "start-dev": "concurrently --kill-others \"yarn run start\" \"yarn run build\" ",
+    "build-docker": "webpack --config webpack.config.js && docker build -t rental-app-fs ./dist"
+  },
+  "name": "webpack-es2017-starter",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "devDependencies": {
+    "babel-core": "^6.25.0",
+    "babel-loader": "^7.0.0",
+    "babel-plugin-transform-async-to-generator": "^6.24.1",
+    "babel-plugin-transform-object-rest-spread": "^6.23.0",
+    "babel-polyfill": "^6.23.0",
+    "babel-preset-env": "^1.5.2",
+    "concurrently": "^3.5.0",
+    "nodemon": "^1.11.0",
+    "webpack": "^2.6.1"
+  },
+  "dependencies": {
+    "cuid": "^1.3.8",
+    "express": "^4.15.4",
+    "multer": "^1.3.0",
+    "rethinkdb": "^2.3.3"
+  }
+}
