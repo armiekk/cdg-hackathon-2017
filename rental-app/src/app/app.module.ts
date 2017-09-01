@@ -6,6 +6,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { AppStoreModule } from './store/app-store.module';
 import { HttpClientModule } from '@angular/common/http';
 import { AngularFireModule } from 'angularfire2';
+import { AngularFireAuthModule } from 'angularfire2/auth';
 
 import { AppComponent } from './app.component';
 
@@ -14,6 +15,9 @@ import { environment } from '../environments/environment';
 
 // services
 import { RentalService } from './services/rental.service';
+import { AuthService } from './services/auth.service';
+// guards
+import { AuthGuard } from './guards/auth.guard'; 
 
 @NgModule({
   declarations: [
@@ -27,8 +31,13 @@ import { RentalService } from './services/rental.service';
     AppStoreModule,
     HttpClientModule,
     AngularFireModule.initializeApp(environment.firebase),
+    AngularFireAuthModule,
   ],
-  providers: [RentalService],
+  providers: [
+    RentalService,
+    AuthService,
+    AuthGuard,
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
