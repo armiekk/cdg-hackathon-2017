@@ -1,0 +1,38 @@
+<div class="ui-g">
+
+    <div class="ui-g-4"></div>
+
+    <div class="ui-g-3 ui-g-nopad">
+        <div class="ui-g">
+            <div class="ui-g-9">
+                <p-dropdown [style]="{'width': '100%'}" (onChange)="onSelectValue($event)" [options]="fareRange"></p-dropdown>
+            </div>
+            <div class="ui-g-3">
+                <button pButton icon="fa-search" label="ค้นหา" (click)="filterRentalList(selectedFeeRange)"></button>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+<div class="ui-g">
+    <div class="ui-g-2"></div>
+    <div class="ui-g-8">
+        <p-dataList [emptyMessage]="'ไม่มีข้อมูล'" [value]="state.data">
+            <ng-template let-rental pTemplate="item">
+                <div class="ui-g">
+                    <div class="ui-g-8">
+                        <p><a href="" (click)="onClickRentalPost($event, rental)"><strong>{{rental.name}}</strong></a></p>
+                        <p><strong>ที่อยู่ : </strong>{{rental.address}}</p>
+                    </div>
+                    <div class="ui-g-2">
+                        <p><strong>Tel. : </strong>{{rental.tel}}</p>
+                    </div>
+                    <div class="ui-g-2">
+                        <p><strong>ค่าเช่า : </strong>{{ rental.fee | currency:'USD':true }} บาท</p>
+                    </div>
+                </div>
+            </ng-template>
+        </p-dataList>
+    </div>
+</div>

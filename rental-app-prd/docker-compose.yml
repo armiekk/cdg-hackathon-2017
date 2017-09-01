@@ -1,0 +1,39 @@
+version: '2'
+services: 
+    gateway:
+        image: rental-app-gateway
+        restart: always
+        expose: 
+            - 8080
+        environment: 
+            GATEWAY_PORT: 8080
+        ports:
+            - '80:8080'
+    api-service:
+        image: rental-app-api
+        restart: always
+        expose: 
+            - 3000
+        environment: 
+            RENTAL_API_DS_URL: http://db-service:28015/rental_db
+    app-service:
+        image: rental-app
+        restart: always
+        expose: 
+            - 4200
+    fs-service:
+        image: rental-app-fs
+        restart: always
+        expose: 
+            - 5000
+    db-service:
+        image: rental-app-db
+        restart: always
+        expose: 
+            - 28015
+        volumes: 
+            - "rental-app-volume:/data"
+volumes: 
+    rental-app-volume:
+
+        

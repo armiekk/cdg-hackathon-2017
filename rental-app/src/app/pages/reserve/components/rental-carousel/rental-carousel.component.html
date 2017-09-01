@@ -1,0 +1,3 @@
+<div class="image-carousel">
+    <img style="margin: 0 0.3em;cursor: pointer" *ngFor="let img of value" [src]="img.file" [alt]="img.fileName" (click)="displayModal(img)">
+</div>

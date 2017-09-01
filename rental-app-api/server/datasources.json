@@ -1,0 +1,11 @@
+{
+  "db": {
+    "name": "db",
+    "connector": "memory"
+  },
+  "rentalDs": {
+    "url": "${RENTAL_API_DS_URL}",
+    "name": "rentalDs",
+    "connector": "loopback-connector-rethinkdb"
+  }
+}

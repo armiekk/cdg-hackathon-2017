@@ -1,0 +1,6 @@
+backup
+rental-app/node_modules
+rental-app/production/node_modules
+rental-app-api/node_modules
+rental-app-fs/node_modules
+rental-app-gateway/node_modules

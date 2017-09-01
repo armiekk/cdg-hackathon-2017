@@ -1,0 +1,21 @@
+{
+  "name": "rental-app-production",
+  "version": "1.0.0",
+  "main": "index.js",
+  "author": "Arm Kengponhsakul",
+  "license": "MIT",
+  "scripts": {
+    "build-docker": "docker build -t rental-app ."
+  },
+  "dependencies": {
+    "express": "^4.14.1",
+    "http-proxy": "^1.16.2"
+  },
+  "devDependencies": {
+    "babel-core": "^6.25.0",
+    "babel-loader": "^7.1.1",
+    "babel-preset-env": "^1.6.0",
+    "uglifyjs-webpack-plugin": "^0.4.6",
+    "webpack": "^3.0.0"
+  }
+}

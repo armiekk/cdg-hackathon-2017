@@ -1,0 +1,8 @@
+/* You can add global styles to this file, and also import other style files */
+.ui-datalist-data > li:nth-child(even) {
+    background-color: #FFF;
+}
+
+.ui-datalist-data > li:nth-child(odd) {
+    background-color: #CCC;
+}

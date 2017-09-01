@@ -1,0 +1,53 @@
+{
+  "name": "rental",
+  "base": "PersistedModel",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": true
+  },
+  "properties": {
+    "id": {
+      "type": "string",
+      "id": true,
+      "generated": true
+    },
+    "name": {
+      "type": "string"
+    },
+    "address": {
+      "type": "string"
+    },
+    "roomDetail": {
+      "type": "string"
+    },
+    "tel": {
+      "type": "string"
+    },
+    "owner": {
+      "type": "string"
+    },
+    "isReserved": {
+      "type": "boolean",
+      "default": false
+    },
+    "deposite": {
+      "type": "number"
+    },
+    "fee": {
+      "type": "number"
+    },
+    "feeType": {
+      "type": "number"
+    }
+  },
+  "validations": [],
+  "relations": {
+    "rentalImages": {
+      "type": "hasMany",
+      "model": "rentalImage",
+      "foreignKey": ""
+    }
+  },
+  "acls": [],
+  "methods": {}
+}
