@@ -8,6 +8,7 @@ import { UserBarComponent } from './components/user-bar/user-bar.component';
         UserBarComponent
     ],
     imports: [
+      CommonModule,
         DropdownModule, DataListModule, ButtonModule,
     ],
     exports: [
