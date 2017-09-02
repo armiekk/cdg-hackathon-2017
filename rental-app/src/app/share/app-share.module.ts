@@ -9,7 +9,7 @@ import { UserBarComponent } from './components/user-bar/user-bar.component';
         UserBarComponent
     ],
     imports: [
-        FormsModule,
+        FormsModule, CommonModule,
         DropdownModule, DataListModule, ButtonModule, InputTextModule
     ],
     exports: [
