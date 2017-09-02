@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { DropdownModule, DataListModule, ButtonModule } from 'primeng/primeng';
+import { FormsModule } from '@angular/forms';
+import { DropdownModule, DataListModule, ButtonModule, InputTextModule } from 'primeng/primeng';
 import { UserBarComponent } from './components/user-bar/user-bar.component';
 
 @NgModule({
@@ -8,10 +9,12 @@ import { UserBarComponent } from './components/user-bar/user-bar.component';
         UserBarComponent
     ],
     imports: [
-        DropdownModule, DataListModule, ButtonModule,
+        FormsModule,
+        DropdownModule, DataListModule, ButtonModule, InputTextModule
     ],
     exports: [
-        DropdownModule, DataListModule, ButtonModule,
+        FormsModule,
+        DropdownModule, DataListModule, ButtonModule, InputTextModule,
         // components
         UserBarComponent,
     ],

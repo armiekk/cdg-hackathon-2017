@@ -44,7 +44,7 @@ export class SearchComponent implements OnInit {
         event.preventDefault();
         this.$store.dispatch(new RentalActions.SelectRental(rentalPost));
         this.$store.dispatch(new RentalActions.ResetRentalList());
-        this.$router.navigate(['/', 'reserve'], { queryParams: { rentalId: rentalPost.id } });
+        this.$router.navigate(['/', 'reserve', 'detail'], { queryParams: { rentalId: rentalPost.id } });
     }
 
     filterRentalList(feeType: number) {

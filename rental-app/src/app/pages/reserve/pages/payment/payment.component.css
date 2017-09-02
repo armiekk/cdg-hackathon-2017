@@ -1,0 +1,18 @@
+.upload-btn {
+    background-color: #485562;
+    padding: 0.25em;
+    display: block;
+    color: white;
+    width: 110px;
+    text-align: center;
+    border-radius: 0 4px 4px 0;
+    height: 30px;
+    box-sizing: border-box;
+    cursor: pointer;
+}
+
+.input-field {
+    border-radius: 4px 0 0 4px;
+    height: 30px;
+    width: 100%;
+}

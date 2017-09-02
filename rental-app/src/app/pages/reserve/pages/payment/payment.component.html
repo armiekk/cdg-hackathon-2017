@@ -1,0 +1,30 @@
+<comp-user-bar></comp-user-bar>
+<div class="ui-g">
+    <div class="ui-xl-4 ui-lg-4 ui-g-nopad"></div>
+    <div class="ui-g-4 ui-g-nopad" style="display: flex">
+        <input type="text" class="input-field" [(ngModel)]="fileName" pInputText>
+        <input id="upload-slip" type="file" style="display: none" *ngIf="true" [multiple]="false" (change)="onSelectFile($event)">
+        <label for="upload-slip">
+                <span class="upload-btn"><i class="fa fa-folder-open-o"></i> <strong>เลือกไฟล์</strong></span>
+        </label>
+    </div>
+</div>
+<div class="ui-g">
+    <div class="ui-g-4"></div>
+    <div class="ui-g-4 ui-g-nopad">
+        <div class="ui-g-4">
+            ระบุจำนวนเงิน :
+        </div>
+        <div class="ui-g-8">
+            <input type="number" style="width: 100%" pInputText [(ngModel)]="amount">
+        </div>
+    </div>
+</div>
+<div class="ui-g">
+    <div class="ui-g-12">
+        <div style="text-align: center">
+            <button pButton icon="fa-check" label="ยืนยันการจอง" (click)="uploadSlip(rentalId, amount, selectedFile)"></button>
+            <button pButton icon="fa-angle-left" label="ย้อนกลับ" (click)="backToSearch()" class="ui-button-secondary"></button>
+        </div>
+    </div>
+</div>
