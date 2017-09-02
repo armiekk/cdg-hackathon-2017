@@ -19,7 +19,7 @@ export class UserBarComponent implements OnInit {
         private $router: Router,
 
     ) {
-      this.isSmall = document.documentElement.clientWidth
+      this.isSmall = document.documentElement.clientWidth < 450
     }
 
   @HostListener('window:resize', ['$event'])
