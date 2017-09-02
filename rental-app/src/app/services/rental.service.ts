@@ -19,11 +19,11 @@ export class RentalService {
     ) { }
 
     findRentalList(query?: Rental) {
-        let fieldCondition;
+        let fieldCondition = {};
         query = { ...query, isReserved: false };
         let params: HttpParams = new HttpParams();
         if (query) {
-            fieldCondition = { where: query };
+            fieldCondition = { where: query, order: 'fee ASC' };
             params = params.set('filter', JSON.stringify(fieldCondition));
         }
         return this.$http.get(`${this.contextRoute}/rentals`, {
