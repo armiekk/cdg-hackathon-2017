@@ -1,9 +1,14 @@
 <div class="ui-g">
-    <div class="ui-g-12">
-        <p style="text-align: center">
-            <strong><i class="fa fa-user"></i> ผู้ใช้งาน :</strong>
-            <span>{{ userName }}</span>
-            <button pButton label="ออกจากระบบ" icon="fa-sign-out" (click)="logout()"></button>
-        </p>
-    </div>
+  <div class="ui-sm-8 ui-md-8 ui-g-8 ui-g-nopad" style="margin: auto 0px">
+    <p style="text-align: left" >
+      <strong><i class="fa fa-user"></i>&nbsp;&nbsp;</strong>
+      <span style="font-size: 14px">{{ userName }}</span>
+    </p>
+  </div>
+  <div class="ui-sm-4 ui-md-4 ui-g-4 ui-g-nopad">
+    <p style="text-align: right">
+      <button pButton label="Sigh Out" icon="fa-sign-out" (click)="logout()" *ngIf="!isSmall"></button>
+      <button pButton icon="fa-sign-out" (click)="logout()" *ngIf="isSmall" style="min-width: 50px"></button>
+    </p>
+  </div>
 </div>
