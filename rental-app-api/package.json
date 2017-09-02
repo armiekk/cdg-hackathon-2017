@@ -8,7 +8,8 @@
   "scripts": {
     "lint": "eslint .",
     "start": "nodemon .",
-    "posttest": "npm run lint && nsp check"
+    "posttest": "npm run lint && nsp check",
+    "build-docker": "docker build -t rental-app-api ."
   },
   "dependencies": {
     "compression": "^1.0.3",

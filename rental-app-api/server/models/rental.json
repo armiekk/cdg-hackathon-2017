@@ -46,6 +46,11 @@
       "type": "hasMany",
       "model": "rentalImage",
       "foreignKey": ""
+    },
+    "rentalPayments": {
+      "type": "hasMany",
+      "model": "rentalPayment",
+      "foreignKey": ""
     }
   },
   "acls": [],

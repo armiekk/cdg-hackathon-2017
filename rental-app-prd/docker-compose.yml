@@ -24,6 +24,8 @@ services:
     fs-service:
         image: rental-app-fs
         restart: always
+        environment: 
+            - NODE_ENV=PRODUCTION
         expose: 
             - 5000
     db-service:

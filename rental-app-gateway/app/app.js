@@ -20,6 +20,10 @@ app.use('/api/upload/images', (req, res) => {
     proxy.web(req, res, { target: `http://${fsHost}:5000/api/upload/images` });
 });
 
+app.use('/api/payment/slip', (req, res) => {
+    proxy.web(req, res, { target: `http://${fsHost}:5000/api/payment/slip` });
+});
+
 app.use('/', (req, res) => {
     proxy.web(req, res, { target: `http://${appHost}:4200` });
 });

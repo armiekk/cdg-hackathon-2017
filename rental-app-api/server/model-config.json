@@ -42,5 +42,9 @@
   "rentalImage": {
     "dataSource": "rentalDs",
     "public": true
+  },
+  "rentalPayment": {
+    "dataSource": "rentalDs",
+    "public": true
   }
 }

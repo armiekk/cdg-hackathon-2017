@@ -9380,6 +9380,10 @@ app.use('/api/upload/images', function (req, res) {
     proxy.web(req, res, { target: 'http://' + fsHost + ':5000/api/upload/images' });
 });
 
+app.use('/api/payment/slip', function (req, res) {
+    proxy.web(req, res, { target: 'http://' + fsHost + ':5000/api/payment/slip' });
+});
+
 app.use('/', function (req, res) {
     proxy.web(req, res, { target: 'http://' + appHost + ':4200' });
 });

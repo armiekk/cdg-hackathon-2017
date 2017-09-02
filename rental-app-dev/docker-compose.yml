@@ -38,4 +38,5 @@ services:
         ports:
             - '28015:28015'
             - '8081:8080'
-        
+volumes: 
+    rental-app-volume:

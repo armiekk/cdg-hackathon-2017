@@ -1,5 +1,5 @@
 {
-  "name": "rentalImage",
+  "name": "rentalPayment",
   "base": "PersistedModel",
   "idInjection": true,
   "options": {
@@ -7,15 +7,17 @@
   },
   "properties": {
     "id": {
-      "type": "string",
-      "id": true,
-      "generated": true
+      "type": "string"
     },
     "fileName": {
       "type": "string"
     },
     "file": {
       "type": "object"
+    },
+    "amount": {
+      "type": "number",
+      "default": 0
     }
   },
   "validations": [],
