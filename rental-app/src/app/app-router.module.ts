@@ -6,13 +6,21 @@ const routes: Routes = [
     { path: '', redirectTo: 'search', pathMatch: 'full' },
     { path: 'login', loadChildren: './pages/login/login.module#LoginModule' },
     { path: 'register', loadChildren: './pages/register/register.module#RegisterModule' },
-    { 
-        path: 'search', 
+    {
+        path: 'search',
         loadChildren: './pages/search/search.module#SearchModule',
-        canActivate: [AuthGuard], 
+        canActivate: [AuthGuard],
     },
-    { path: 'reserve', loadChildren: './pages/reserve/reserve.module#ReserveModule' },
-    { path: 'report', loadChildren: './pages/report/report.module#ReportModule' },
+    {
+        path: 'reserve',
+        loadChildren: './pages/reserve/reserve.module#ReserveModule',
+        canActivate: [AuthGuard],
+    },
+    {
+        path: 'report',
+        loadChildren: './pages/report/report.module#ReportModule',
+        canActivate: [AuthGuard],
+    },
 ];
 
 @NgModule({
